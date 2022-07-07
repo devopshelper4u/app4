@@ -1,0 +1,22 @@
+name: Auto-increment version
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.MY_TOKEN }}
+    - run: git config --global user.name 'devopshelper4u'
+    - run: git config --global user.email 'devops.helper.4u@gmail.com'
+    - run: npm version patch -m "[RELEASE] %s"
+    - run: git push
