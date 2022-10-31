@@ -11,7 +11,7 @@
                 "resources": "app1",
                 "type": "lib",
                 "url": "dist/app1.min.js",
-                "version": "4.5.63"
+                "version": "4.5.64"
             },
             "@devopshelper4u/app2": {
                 "config": "config/server.json",
