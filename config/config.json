@@ -1,34 +1,36 @@
 {
-  "testers": {
-    "name": "MyApp",
-    "path": "",
-    "title": "MyApp",
-    "worker": "service-worker.js",
-    "meta": {
-      "mobile-web-app-capable": "yes"
-    },
-    "microapps": {
-      "@devopshelper4u/app1": {
-        "name": "MyApp Home",
-        "path": "app1",
-        "resources": "app1",
-        "config": "config/server.json",
-        "type": "lib",
-        "version": "0.1.40",
-        "url": "dist/app1.min.js"
-      },
-      "@devopshelper4u/app2": {
-        "name": "MyApp Start",
-        "path": "app2",
-        "resources": "app2",
-        "config": "config/server.json",
-        "type": "lib",
-        "version": "0.1.18",
-        "url": "dist/app2.min.js"
-      },
-      "$APP_NAME": {
-        "version": "$APP_VERSION"
-      }
+    "content": {
+        "testers": {
+            "meta": {
+                "mobile-web-app-capable": "yes"
+            },
+            "microapps": {
+                "$APP_NAME": {
+                    "version": "$APP_VERSION"
+                },
+                "@devopshelper4u/app1": {
+                    "config": "config/server.json",
+                    "name": "MyApp Home",
+                    "path": "app1",
+                    "resources": "app1",
+                    "type": "lib",
+                    "url": "dist/app1.min.js",
+                    "version": "4.5.59"
+                },
+                "@devopshelper4u/app2": {
+                    "config": "config/server.json",
+                    "name": "MyApp Start",
+                    "path": "app2",
+                    "resources": "app2",
+                    "type": "lib",
+                    "url": "dist/app2.min.js",
+                    "version": "0.1.18"
+                }
+            },
+            "name": "MyApp",
+            "path": "",
+            "title": "MyApp",
+            "worker": "service-worker.js"
+        }
     }
-  }
 }
