@@ -5,9 +5,6 @@
                 "mobile-web-app-capable": "yes"
             },
             "microapps": {
-                "$APP_NAME": {
-                    "version": "$APP_VERSION"
-                },
                 "@devopshelper4u/app1": {
                     "config": "config/server.json",
                     "name": "MyApp Home",
@@ -15,7 +12,7 @@
                     "resources": "app1",
                     "type": "lib",
                     "url": "dist/app1.min.js",
-                    "version": "4.5.59"
+                    "version": "1.1.1.1"
                 },
                 "@devopshelper4u/app2": {
                     "config": "config/server.json",
